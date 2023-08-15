@@ -10,7 +10,10 @@ def greeting():
 
 @app.route("/calculator/add", methods=['POST'])
 def add():
-    number = request.jsonSujan-Kandukuri
+    number = request.json
+    result = number['first'] + number['second']
+    return {"result": result }
+
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
     numbers = request.json
